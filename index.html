@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#162522" />
+    <title>Un libro para reír — chistes en español</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Un libro para reír, inicio">
+          <span class="brand-mark" aria-hidden="true">✳</span>
+          <span>Rincón de risas</span>
+        </a>
+        <p class="topbar-note">Una pausa breve, una sonrisa larga.</p>
+      </header>
+
+      <section class="reading-area" aria-label="Libro de chistes">
+        <div class="intro">
+          <p class="eyebrow">Tu dosis diaria de humor</p>
+          <h1>Un libro para <span>reír.</span></h1>
+          <p class="intro-copy">Chistes en español. Pasa la página y descubre el siguiente.</p>
+        </div>
+
+        <article class="book" aria-live="polite" aria-atomic="true">
+          <div class="book-spine" aria-hidden="true"></div>
+          <div class="book-page">
+            <div class="page-topline">
+              <span class="page-category" id="pageCategory">Humor cotidiano</span>
+              <span class="page-number" id="pageNumber">01 / 10</span>
+            </div>
+
+            <div class="joke-content">
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <h2 id="jokeQuestion">Cargando chistes...</h2>
+              <p class="joke-answer" id="jokeAnswer"></p>
+            </div>
+
+            <div class="page-bottomline">
+              <span>Hecho para compartir una risa</span>
+              <span class="page-flower" aria-hidden="true">✳</span>
+            </div>
+          </div>
+        </article>
+
+        <nav class="book-controls" aria-label="Navegación del libro">
+          <button class="nav-button previous-button" id="previousButton" type="button" aria-label="Ir a la página anterior">
+            <span aria-hidden="true">←</span>
+            <span class="button-label">Anterior</span>
+          </button>
+
+          <div class="page-picker" id="pagePicker" aria-label="Seleccionar página"></div>
+
+          <button class="nav-button next-button" id="nextButton" type="button" aria-label="Ir a la página siguiente">
+            <span class="button-label">Siguiente</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </nav>
+        <p class="keyboard-hint">También puedes usar las flechas del teclado</p>
+        <p class="api-status" id="apiStatus" role="status" aria-live="polite"></p>
+        <button class="nav-button retry-button" id="retryButton" type="button" hidden>Reintentar</button>
+        <p class="api-credit">Chistes proporcionados por <a href="https://v2.jokeapi.dev/" target="_blank" rel="noopener noreferrer">JokeAPI</a>.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
